@@ -14,9 +14,30 @@
     background: #ddd;
     text-align: center;
   }
+
+  input
+  {
+    font-size: 24px;
+    width: 80%;
+  }
+
+  button
+  {
+    font-size: 24px;
+    width: 80%;
+  }
   </style>
 
   <script>
+    function calcular_cms()
+    {
+      var pvm = document.getElementById("pvm").value
+      var cms = 1.8545 + (0.01937 * pvm)
+      document.getElementById("resultado").value = cms
+      console.log(cms)
+
+    }
+
   </script>
 </head>
 <body>
@@ -25,10 +46,10 @@
   <h1>CMS - Consumo de Matéria Seca</h1>
   Peso Vivo Médio <br>
   <input type="text" id="pvm"><br>
-  <button value="" >Calcular</button><br>
+  <button onclick="calcular_cms()" >Calcular</button><br>
   
   <br>
 
-  <input type="text" id="cms" readonly="readonly" value="Resultado"><br>
+  <input type="text" id="resultado" readonly="readonly" value="Resultado"><br>
 </body>
 </html>
