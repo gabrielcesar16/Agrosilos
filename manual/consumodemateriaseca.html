@@ -1,0 +1,49 @@
+<html>
+<head>
+  <title>Silagem</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <meta charset="utf-8">
+  <link rel ="stylesheet" href="../estilo.css">
+  <script src="../function.js"></script> 
+</head>
+<body>
+    <br>
+    <br>
+    <h3>Manual - Consumo de máteria seca</h3>  
+    
+    <p> Formúla: CMS = 1,8545 + (0,01937 x PVM) </p>
+    <button class="collapsible">CMS</button>
+    <div class="content">
+        <p>Consumo de matéria seca na produção da silagem.</p>
+    </div>
+    <button class="collapsible">PVM</button>
+    <div class="content">
+        <p>Peso vivo médio (PVM) dos animais a serem alimentados.</p>
+    </div>
+
+    <br>  
+    <br>
+    <input type="button" onclick="location.href='../manual.html';" value="Voltar" />   
+
+    <script>
+    
+    var coll = document.getElementsByClassName("collapsible");
+  var i;
+  
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+
+    </script>
+    
+
+</body>
+</html>

@@ -3,42 +3,8 @@
   <title>Silagem</title>
   <meta name="viewport" content="width=device-width, user-scalable=no">
   <meta charset="utf-8">
-  <style>
-  *
-  {
-    font-family: helvetica;
-  }
-
-  body
-  {
-    background: #ddd;
-    text-align: center;
-  }
-
-  input
-  {
-    font-size: 24px;
-    width: 80%;
-  }
-
-  button
-  {
-    font-size: 24px;
-    width: 80%;
-  }
-  </style>
-
-  <script>
-    function calcular_cms()
-    {
-      var pvm = document.getElementById("pvm").value
-      var cms = 1.8545 + (0.01937 * pvm)
-      document.getElementById("resultado").value = cms
-      console.log(cms)
-
-    }
-
-  </script>
+  <link rel ="stylesheet" href="estilo.css">
+  <script src="function.js"></script> 
 </head>
 <body>
   <h2>Silagem</h2>
@@ -47,9 +13,11 @@
   Peso Vivo Médio <br>
   <input type="text" id="pvm"><br>
   <button onclick="calcular_cms()" >Calcular</button><br>
+  <button onclick="clear_cms()" >Limpar</button><br>
   
   <br>
 
-  <input type="text" id="resultado" readonly="readonly" value="Resultado"><br>
+  <input type="text" id="resultado" readonly="readonly" value=""><br>
+  <input type="button" onclick="location.href='main.html';" value="Voltar" />
 </body>
 </html>
