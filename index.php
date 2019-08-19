@@ -18,6 +18,11 @@
 			<div class="col-md-12 text-center">
 			    <div class="container">	
                     <p> Crislaine Rodrigues </p>
+                    <p> Gabriel Cesar </p>
+                    <p> Míriam Vitória </p>
+                    <p> Moisés Guedes </p>
+                    <p> Nicole Marques </p>
+
                 </div>      
             </div>
     </div>
