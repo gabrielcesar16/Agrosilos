@@ -1,5 +1,5 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="main.php">
+  <a class="navbar-brand" href="index.php">
     <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
     Agro Silos
   </a>
@@ -11,7 +11,7 @@
     <ul class="navbar-nav mr-auto">
 
       <li class="nav-item">
-        <a class="nav-link" href="index.php" id="nav-principal">Sobre</a>
+        <a class="nav-link" href="sobre.php" id="nav-principal">Sobre</a>
       </li>
 
       <li class="nav-item">
@@ -30,8 +30,8 @@
           }
 
     			if(isset($_SESSION['logged'])){
-    				if(isset($_SESSION['nickname'])){
-    					echo $_SESSION['nickname'];
+    				if(isset($_SESSION['nome'])){
+    					echo $_SESSION['nome'];
     				}else echo $_SESSION['nome'];
     			}else echo 'Entrar';
     		?></a>
