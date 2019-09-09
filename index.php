@@ -37,10 +37,15 @@
 				<input type="text" class="form-control" id="consumo_diario" placeholder="">
 			</div>
 
-			<div class="form-group row">
-				<label for="inputtext" >Altura do Silo:</label>
-				<input type="text" class="form-control" id="altura_silo" placeholder="">
-			</div>
+			<div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+  				<span class="caret"></span></button>
+  				<ul class="dropdown-menu">
+    					<li><a href="#">2</a></li>
+    					<li><a href="#">3</a></li>
+    					<li><a href="#">4</a></li>
+ 				 </ul>
+			</div> 
 
 			<div class="form-group row">
 				<label for="inputtext" >Espressura da fatia a ser retirada diariamente:</label>
