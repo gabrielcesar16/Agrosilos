@@ -38,6 +38,7 @@
 			</div>
 
 			<div class="dropdown">
+				<label for="inputtext" >Altura do Silo:</label>
                                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
   				<span class="caret"></span></button>
   				<ul class="dropdown-menu">
