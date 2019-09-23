@@ -1,3 +1,18 @@
+<?php
+
+include "conexao.php"; 
+
+session_start();
+
+$email = $_SESSION["email"];
+$senha = $_SESSION["senha"];
+
+$query = "SELECT nome FROM agricultor WHERE email = '$email' and senha = '$senha'";
+$result = mysqli_query($conn, $query);
+$row = mysqli_fetch_assoc($result);
+
+?>
+
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="index.php">
     <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
@@ -23,18 +38,10 @@
 
     <ul class="navbar-nav ml-auto">
 			<li class="nav-item active">
-    		<a id="nav-account" style="color: white" href="account.php"><img src="outline-account_circle-24px.svg" width="30" height="30" class="d-inline-block align-top" alt="Conta">
-    		<?php
-    			if(session_status() == PHP_SESSION_NONE){
-            session_start();
-          }
-
-    			if(isset($_SESSION['logged'])){
-    				if(isset($_SESSION['nome'])){
-    					echo $_SESSION['nome'];
-    				}else echo $_SESSION['nome'];
-    			}else echo 'Entrar';
-    		?></a>
+    		<a id="nav-account" style="color: white" href="account.php">
+        <img src="outline-account_circle-24px.svg" width="30" height="30" class="d-inline-block align-top" alt="Conta">
+    		  asd
+        </a>
 			</li>
     </ul>
   </div>
