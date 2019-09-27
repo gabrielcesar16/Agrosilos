@@ -1,65 +1,50 @@
--- 20190906
--- FOREIGN KEY (id) REFERENCES silo(id) ON DELETE CASCADE,
-
-CREATE TABLE silo
-(
-	id INTEGER NOT NULL AUTO_INCREMENT, 
-	altura INTEGER DEFAULT 0,
-	PRIMARY KEY (id)
-) ENGINE=INNODB;
-
-CREATE TABLE forragem
-(
-	id INTEGER NOT NULL AUTO_INCREMENT, 
-	densidade_media FLOAT DEFAULT 0,
-	dias_fornecimento INTEGER DEFAULT 0,
-	expessura_diaria FLOAT DEFAULT 0,
-	PRIMARY KEY (id)
-) ENGINE=INNODB;
-
-CREATE TABLE animal
-(
-	id INTEGER NOT NULL AUTO_INCREMENT, 
-	quantidade INTEGER DEFAULT 0,
-	consumo INTEGER DEFAULT 0,
-	PRIMARY KEY (id)
-) ENGINE=INNODB;
+-- 20162290202
 
 CREATE TABLE agricultor
 (
 	id INTEGER NOT NULL AUTO_INCREMENT, 
 	nome VARCHAR(64),
 	email VARCHAR(64),
+	login VARCHAR(64),
 	senha VARCHAR(64),
 	propriedade VARCHAR(64),
 	PRIMARY KEY (id)
 ) ENGINE=INNODB;
 
+CREATE TABLE calculos
+(
+	id INTEGER NOT NULL AUTO_INCREMENT, 
+    data datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+    numero_animais INTEGER DEFAULT 0,
+    dias_fornecimento INTEGER DEFAULT 0,
+    consumo_forragem INTEGER DEFAULT 0,
+    altura_silo INTEGER DEFAULT 0,
+    espessura_fatia FLOAT DEFAULT 0.0,
+    densidade INTEGER DEFAULT 0,
+
+    quantidade_silo FLOAT DEFAULT 0.0,
+    volume_silo FLOAT DEFAULT 0.0,
+    volume_dia FLOAT DEFAULT 0.0,
+    area_secao FLOAT DEFAULT 0.0,
+    tamanho_base FLOAT DEFAULT 0.0,
+    base_menor FLOAT DEFAULT 0.0,
+    base_maior FLOAT DEFAULT 0.0,
+    comprimento_silo FLOAT DEFAULT 0.0,
+
+    FOREIGN KEY (id) REFERENCES agricultor(id) ON DELETE CASCADE,
+	PRIMARY KEY (id)
+) ENGINE=INNODB;
 
 -- crud
 -- CREATE
-
-INSERT INTO silo VALUES(DEFAULT, 10);
-
-INSERT INTO forragem VALUES(DEFAULT, 1.7, 8, 1.5);  
-
-INSERT INTO animal VALUES(DEFAULT, 4, 20);  
-
 INSERT INTO agricultor VALUES
-    (DEFAULT, 'Steve Jobs', 'steve', '1', 'Apple'),
-    (DEFAULT, 'Bill Gates', 'bill', '1', 'Microsoft')
+    (DEFAULT, 'Steve Jobs', 'steve@apple.com', 'steve', '123', 'Apple'),
+    (DEFAULT, 'Bill Gates', 'bill@microsoft.com', 'bill', 'qwe', 'Microsoft')
 ;  
-
 
 -- crud
 -- RETRIEVE
-
-SELECT * FROM silo;
-
-SELECT * FROM forragem;  
-
-SELECT * FROM animal;  
-
-SELECT * FROM agricultor;  
-
+SELECT * FROM agricultor; 
+SELECT * FROM calculos; 
 

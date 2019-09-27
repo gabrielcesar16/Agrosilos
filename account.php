@@ -46,7 +46,7 @@
 		    		unset($_SESSION['login_error']);
 		    	}
 		    ?>
-		    <form method="POST" action="login.php">
+		    <form method="POST" action="login_system.php">
 				  <div class="form-group required">
 				    <label for="input-email" class="control-label">Email</label>
 				    <input type="email" class="form-control" id="input-email" aria-describedby="emailHelp" placeholder="Insira seu Email" name="email" required value="steve@apple.com">

@@ -22,97 +22,86 @@
 			<h4 align="left">Inserir dados</h1>
 			<hr>
 
+			<form method="post" action="gravar.php">
+
 			<div class="form-group row">
 				<label for="inputtext" >Número de Animais:</label>
-				<input type="text" class="form-control" id="num_animais" placeholder="">
+				<input type="number" class="form-control" name="numero_animais" placeholder="" min="1" max="1024" value="20">
 			</div>
 
 			<div class="form-group row">
 				<label for="inputtext" >Dias de Fornecimento:</label>
-				<input type="text" class="form-control" id="dias_fornecimento" placeholder="">
+				<input type="number" class="form-control" name="dias_fornecimento" placeholder="" min="1" max="1024" value="100">
 			</div>
 
 			<div class="form-group row">
 				<label for="inputtext" >Consumo por dia:</label>
-				<input type="text" class="form-control" id="consumo_diario" placeholder="">
+				<input type="number" class="form-control" name="consumo_forragem" placeholder=""min="1" max="1024" value="35">
 			</div>
 
 			<div class="form-group row">
 				<label for="inputtext" >Altura do Silo:</label>
-				<input type="text" class="form-control" id="altura_silo" placeholder="">
+				<input type="number" class="form-control" name="altura_silo" placeholder="" min="2" max="4" value="2">
 			</div>
 
 			<div class="form-group row">
-				<label for="inputtext" >Espressura da fatia a ser retirada diariamente:</label>
-				<input type="text" class="form-control" id="espressura_diaria" placeholder="">
+				<label for="inputtext" >Espessura da fatia a ser retirada diariamente:</label>
+				<input type="number" class="form-control" name="espessura_fatia" placeholder="" value="0.20">
 			</div>
 
 			<div class="form-group row">
 				<label for="inputtext" >Densidade considerada</label>
-				<input type="text" class="form-control" id="densidade_considerada" placeholder="">
+				<input type="number" class="form-control" name="densidade" placeholder="" value="500">
 			</div>
 			
-
-			<button class="btn btn-primary btn-lg" type="button" data-toggle="collapse" 				data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-   				 Calcular
-  			</button>
-		
-
 
 			</div>	
 
 
 					<br>
 					<div class="container">
-							<div class="collapse" id="collapseExample">
 									<h4 align="left">Resultados</h1>
 									<hr>
 
 										<div class="form-group row">
 											<label for="inputtext" >Quantidade de silagem que o silo deve armazenar (QS):</label>
-											<input type="text" class="form-control" id="quantidade_silagem" placeholder="">
+											<input type="text" class="form-control" name="quantidade_silo" placeholder="">
 										</div>
 
 										<div class="form-group row">
-											<label for="inputtext" >Área necessária para cultivo:</label>
-											<input type="text" class="form-control" id="area_cultivo" placeholder="">
-										</div>
-
-										<div class="form-group row">
-											<label for="inputtext" >Volume do silo (VS) - metro cúbico:</label>
-											<input type="text" class="form-control" id="volume_silo" placeholder="">
+											<label for="inputtext" >Volume do silo:</label>
+											<input type="text" class="form-control" name="volume_silo" placeholder="">
 										</div>
 
 										<div class="form-group row">
 											<label for="inputtext" >Volume diário:</label>
-											<input type="text" class="form-control" id="voluma_diario" placeholder="">
+											<input type="text" class="form-control" name="volume_dia" placeholder="">
 										</div>
 
 										<div class="form-group row">
 											<label for="inputtext" >Área da seção a ser retirada por dia:</label>
-											<input type="text" class="form-control" id="area_secao" placeholder="">
+											<input type="text" class="form-control" name="area_secao" placeholder="">
+										</div>
+
+										<div class="form-group row">
+											<label for="inputtext" >Base menor do silo:</label>
+											<input type="text" class="form-control" name="base_menor" placeholder="">
+										</div>
+
+										<div class="form-group row">
+											<label for="inputtext" >Base Maior do Silo:</label>
+											<input type="text" class="form-control" name="base_maior" placeholder="">
 										</div>
 
 										<div class="form-group row">
 											<label for="inputtext" >Comprimento do Silo:</label>
-											<input type="text" class="form-control" id="comprimento_silo" placeholder="">
+											<input type="text" class="form-control" name="comprimento_silo" placeholder="">
 										</div>
+										<br>
+										<button type="submit" class="btn btn-primary">Gravar</button>
 
-										<div class="form-group row">
-											<label for="inputtext" >Base Menor:</label>
-											<input type="text" class="form-control" id="base_menor" placeholder="">
-										</div>
-
-										<div class="form-group row">
-											<label for="inputtext" >Base Maior:</label>
-											<input type="text" class="form-control" id="base_maior" placeholder="">
-										</div>
-
-
-		
-									  
-										<br></br>
-										<a href="#" class="btn btn-secondary btn-lg" role="button" aria-disabled="true">Imprimir ficha</a>
+										<br>
+										<br>
 
 										</form>
 							</div>
@@ -125,7 +114,6 @@
 		
 
 
-		<script src="function.js"></script> 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
