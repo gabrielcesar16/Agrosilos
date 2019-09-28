@@ -39,10 +39,21 @@
 				<input type="number" class="form-control" name="consumo_forragem" placeholder=""min="1" max="1024" value="35">
 			</div>
 
-			<div class="form-group row">
+			<div class="dropdown">
 				<label for="inputtext" >Altura do Silo:</label>
+<<<<<<< HEAD
 				<input type="number" class="form-control" name="altura_silo" placeholder="" min="2" max="4" value="2">
 			</div>
+=======
+                                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+  				<span class="caret"></span></button>
+  				<ul class="dropdown-menu">
+    					<li><a href="#">2</a></li>
+    					<li><a href="#">3</a></li>
+    					<li><a href="#">4</a></li>
+ 				 </ul>
+			</div> 
+>>>>>>> 57c95ef20c1123880d49569ef73dcf60f2ccb584
 
 			<div class="form-group row">
 				<label for="inputtext" >Espessura da fatia a ser retirada diariamente:</label>

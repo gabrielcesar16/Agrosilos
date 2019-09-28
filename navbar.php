@@ -1,4 +1,8 @@
 <?php
+<<<<<<< HEAD
+=======
+
+>>>>>>> 57c95ef20c1123880d49569ef73dcf60f2ccb584
 include "conexao.php"; 
 
 session_start();
@@ -40,6 +44,7 @@ $row = mysqli_fetch_assoc($result);
     </ul>
 
     <ul class="navbar-nav ml-auto">
+<<<<<<< HEAD
 			<li class="nav-item dropdown ">
         <a class="nav-link dropdown-toggle btn-group dropleft" style="color: white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true img src="outline-account_circle-24px.svg" width="30" height="30" class="d-inline-block align-top" alt="Conta" aria-expanded="false">
         <?php 
@@ -55,6 +60,13 @@ $row = mysqli_fetch_assoc($result);
           <a class="dropdown-item" href="#">Another action</a>
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
+=======
+			<li class="nav-item active">
+    		<a id="nav-account" style="color: white" href="account.php">
+        <img src="outline-account_circle-24px.svg" width="30" height="30" class="d-inline-block align-top" alt="Conta">
+    		  asd
+        </a>
+>>>>>>> 57c95ef20c1123880d49569ef73dcf60f2ccb584
 			</li>
       
     </ul>

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 -- 20162290202
+=======
+-- 20190906
+>>>>>>> 57c95ef20c1123880d49569ef73dcf60f2ccb584
 
 CREATE TABLE agricultor
 (

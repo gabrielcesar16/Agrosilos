@@ -40,12 +40,15 @@
 		    <h5 class="card-title">Conta</h5>
 		    <p class="card-text">Entrar na Conta</p>
 
+<<<<<<< HEAD
 		    <?php
 		    	if(isset($_SESSION['login_error'])){
 		    		echo '<div class="alert alert-danger" role="alert">Erro ao logar, verifique as credenciais!</div>';
 		    		unset($_SESSION['login_error']);
 		    	}
 		    ?>
+=======
+>>>>>>> 57c95ef20c1123880d49569ef73dcf60f2ccb584
 		    <form method="POST" action="login_system.php">
 				  <div class="form-group required">
 				    <label for="input-email" class="control-label">Email</label>
@@ -55,6 +58,12 @@
 				    <label for="input-pass" class="control-label">Senha</label>
 				    <input type="password" class="form-control" id="input-pass" placeholder="Insira sua senha" name="senha" required>
 				  </div>
+
+			  <div class="alert alert-danger">
+  					<strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+				</div>
+
+
 				  <button type="submit" class="btn btn-primary">Entrar</button>
 				  <a href="cadastrar.php" class="btn btn-secondary">Cadastrar</a>
 				</form>
