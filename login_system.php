@@ -19,8 +19,7 @@ while ($querynavbar = mysqli_fetch_array($query)){
 
 session_start();
 
-<<<<<<< HEAD
-=======
+
 if (!is_writable(session_save_path())) {
     echo 'Session path "'.session_save_path().'" is not writable for PHP!'; 
 }
@@ -29,7 +28,7 @@ else
     echo 'Session path "'.session_save_path().'" is writable for PHP!'; 
 }
 
->>>>>>> 57c95ef20c1123880d49569ef73dcf60f2ccb584
+
 if (mysqli_num_rows($result) > 0) 
 {
 		echo "logado";
@@ -40,10 +39,8 @@ if (mysqli_num_rows($result) > 0)
 		$_SESSION["zim"] = "An invader from another planet.";
 		$_COOKIE["password"] = $senha;
 		$_SESSION["senha"] = $senha;
-<<<<<<< HEAD
+
 		$_SESSION['loggedin'] = true;
-=======
->>>>>>> 57c95ef20c1123880d49569ef73dcf60f2ccb584
 
 		echo "<hr>";
 		echo "email: " . $_SESSION["email"] . "<br>";
@@ -53,11 +50,11 @@ if (mysqli_num_rows($result) > 0)
 else 
 {
 		echo "senha incorreta";
-<<<<<<< HEAD
+
 		$_SESSION['loggedin'] = false;
 
-=======
->>>>>>> 57c95ef20c1123880d49569ef73dcf60f2ccb584
+
+
 }
 
 mysqli_close($conn);

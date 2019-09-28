@@ -40,15 +40,13 @@
 		    <h5 class="card-title">Conta</h5>
 		    <p class="card-text">Entrar na Conta</p>
 
-<<<<<<< HEAD
 		    <?php
 		    	if(isset($_SESSION['login_error'])){
 		    		echo '<div class="alert alert-danger" role="alert">Erro ao logar, verifique as credenciais!</div>';
 		    		unset($_SESSION['login_error']);
 		    	}
 		    ?>
-=======
->>>>>>> 57c95ef20c1123880d49569ef73dcf60f2ccb584
+		    
 		    <form method="POST" action="login_system.php">
 				  <div class="form-group required">
 				    <label for="input-email" class="control-label">Email</label>

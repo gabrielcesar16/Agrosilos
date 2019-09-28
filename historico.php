@@ -7,9 +7,15 @@
 	</head>
 	<body>
 
-			<?php
-				include 'navbar.php';
-			?>
+<?php
+	include "conexao.php"; 
+	include "navbar.php";
+					
+					
+	$query = "SELECT * FROM calculos";
+	$result = $conn->query($query);
+
+?>
 		
 		<br>
 		<br>
@@ -43,31 +49,57 @@
              </tr>
              </thead>
             <tbody>
-            <tr>
-            <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-            </tr>
-            <tr>
-                <th scope="row">4</th>
-                 <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-                </tr>
-                <tr>
-                <th scope="row">5</th>
-                 <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-                </tr>
             
-            </tbody>...
+            
+<?php
+
+/*
+    numero_animais INTEGER DEFAULT 0,
+    dias_fornecimento INTEGER DEFAULT 0,
+    consumo_forragem INTEGER DEFAULT 0,
+    altura_silo INTEGER DEFAULT 0,
+    espessura_fatia FLOAT DEFAULT 0.0,
+    densidade INTEGER DEFAULT 0,
+
+    quantidade_silo FLOAT DEFAULT 0.0,
+    volume_silo FLOAT DEFAULT 0.0,
+    volume_dia FLOAT DEFAULT 0.0,
+    area_secao FLOAT DEFAULT 0.0,
+    tamanho_base FLOAT DEFAULT 0.0,
+    base_menor FLOAT DEFAULT 0.0,
+    base_maior FLOAT DEFAULT 0.0,
+    comprimento_silo FLOAT DEFAULT 0.0,
+    */
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+    	echo "<tr><th scope=\"row\">" . date("d/m/Y", strtotime($row["data"])) . "</th>";
+        echo "<td>" . $row["numero_animais"] . "</td>";
+        echo "<td>" . $row["dias_fornecimento"] . "</td>";
+        echo "<td>" . $row["consumo_forragem"] . "</td>";
+        echo "<td>" . $row["altura_silo"] . "</td>";
+        echo "<td>" . $row["espessura_fatia"] . "</td>";
+        echo "<td>" . $row["densidade"] . "</td>";
+        echo "<td>" . $row["quantidade_silo"] . "</td>";
+        echo "<td>" . $row["volume_silo"] . "</td>";
+        echo "<td>" . $row["volume_dia "] . "</td>";
+        echo "<td>" . $row["area_secao"] . "</td>";
+        echo "<td>" . $row["base_menor"] . "</td>";
+        echo "<td>" . $row["base_maior"] . "</td>";
+        echo "<td>" . $row["comprimento_silo"]. "</td>";
+        echo "</tr>";
+    }
+} else {
+    echo "0 results";
+}
+
+
+
+	
+	$conn->close();
+?>
+            
+           </tbody>
              </table>
             </div>

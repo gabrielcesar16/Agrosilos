@@ -1,7 +1,10 @@
-<?
-  header('location:index.php');
-  unset ($_SESSION['email']);
-  unset ($_SESSION['senha']);
-?>
+<?php
 
-Logout
+session_start();
+
+unset ($_SESSION['email']);
+unset ($_SESSION['senha']);
+
+header('Location: account.php');
+
+?>

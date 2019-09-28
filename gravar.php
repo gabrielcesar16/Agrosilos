@@ -11,7 +11,8 @@ dias_fornecimento
 consumo_forragem  
 altura_silo       
 espessura_fatia   
-densidade         
+densidade 
+        
 quantidade_silo   
 volume_silo       
 volume_dia        
@@ -76,7 +77,14 @@ $query = "INSERT INTO calculos
 	consumo_forragem,
 	altura_silo,
 	espessura_fatia,
-	densidade
+	densidade,
+	quantidade_silo,   
+	volume_silo,  
+	volume_dia,        
+	area_secao,             
+	base_menor,        
+	base_maior,        
+	comprimento_silo
 )
 VALUES
 (
@@ -85,7 +93,14 @@ VALUES
 	'$consumo_forragem',
 	'$altura_silo',
 	'$espessura_fatia',
-	'$densidade'
+	'$densidade',
+	'$quantidade_silo',   
+	'$volume_silo',  
+	'$volume_dia',        
+	'$area_secao',             
+	'$base_menor',        
+	'$base_maior',        
+	'$comprimento_silo'
 )";
 
 mysqli_query($conn, $query);
