@@ -21,3 +21,79 @@
     		and (max-device-width : 480px){
     		.mobileHide { display: none;}
 }
+
+input
+{
+  height: 30px;
+  width: 128px;
+  border: 1px solid #aaa;
+  background: #eee;
+  margin-bottom : 1px;
+  outline: none;
+  padding: 0;
+
+}
+
+input:focus
+{
+  background-color: lightyellow;
+}
+
+.label
+{
+  height: 32px;
+  line-height: 32px;
+  width: 150px;
+  margin-bottom : 1px;
+  outline: none;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.set
+{
+  float: left;
+}
+
+.separator
+{
+  width: 16px;
+  height: 16px;
+  float: left;
+}
+
+/* chart_start */
+.chart
+{
+  position: absolute; 
+  background: white;
+  width: 31px;
+  overflow: hidden;
+}
+
+.chart_base_maior
+{
+  top: 3%; 
+  left: 70%; 
+}
+
+.chart_base_menor
+{
+  top: 91%; 
+  left: 48%; 
+}
+
+.chart_comprimento_silo
+{
+  top: 19%; 
+  left: 20%; 
+}
+
+.chart_altura_silo
+{
+  top: 62%; 
+  left: 85%; 
+}
+/* chart_end */
+
+

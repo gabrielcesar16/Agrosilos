@@ -70,6 +70,12 @@ $(document).ready(function(){
     $('[name=base_menor]').val(base_menor())
     $('[name=base_maior]').val(base_maior())
     $('[name=comprimento_silo]').val(comprimento_silo())
+
+    $('.chart_base_maior').text(base_maior())
+    $('.chart_base_menor').text(base_menor())
+    $('.chart_comprimento_silo').text(comprimento_silo())
+    $('.chart_altura_silo').text($('[name=altura_silo]').val())
+    
   })
   
   $('[name=dias_fornecimento]').on('change keyup', function(){
@@ -80,6 +86,12 @@ $(document).ready(function(){
     $('[name=base_menor]').val(base_menor())
     $('[name=base_maior]').val(base_maior())
     $('[name=comprimento_silo]').val(comprimento_silo())
+
+    $('.chart_base_maior').text(base_maior())
+    $('.chart_base_menor').text(base_menor())
+    $('.chart_comprimento_silo').text(comprimento_silo())
+    $('.chart_altura_silo').text($('[name=altura_silo]').val())
+
   })
   
   $('[name=consumo_forragem]').on('change keyup', function(){
@@ -90,6 +102,12 @@ $(document).ready(function(){
     $('[name=base_menor]').val(base_menor())
     $('[name=base_maior]').val(base_maior())
     $('[name=comprimento_silo]').val(comprimento_silo())
+
+    $('.chart_base_maior').text(base_maior())
+    $('.chart_base_menor').text(base_menor())
+    $('.chart_comprimento_silo').text(comprimento_silo())
+    $('.chart_altura_silo').text($('[name=altura_silo]').val())
+
   })
 
   $('[name=altura_silo]').on('change keyup', function(){
@@ -100,6 +118,12 @@ $(document).ready(function(){
     $('[name=base_menor]').val(base_menor())
     $('[name=base_maior]').val(base_maior())
     $('[name=comprimento_silo]').val(comprimento_silo())
+
+    $('.chart_base_maior').text(base_maior())
+    $('.chart_base_menor').text(base_menor())
+    $('.chart_comprimento_silo').text(comprimento_silo())
+    $('.chart_altura_silo').text($('[name=altura_silo]').val())
+
   })
   
   $('[name=espessura_fatia]').on('change keyup', function(){
@@ -110,6 +134,12 @@ $(document).ready(function(){
     $('[name=base_menor]').val(base_menor())
     $('[name=base_maior]').val(base_maior())
     $('[name=comprimento_silo]').val(comprimento_silo())
+
+    $('.chart_base_maior').text(base_maior())
+    $('.chart_base_menor').text(base_menor())
+    $('.chart_comprimento_silo').text(comprimento_silo())
+    $('.chart_altura_silo').text($('[name=altura_silo]').val())
+    
   })
   
   $('[name=densidade]').on('change keyup', function(){
@@ -120,6 +150,12 @@ $(document).ready(function(){
     $('[name=base_menor]').val(base_menor())
     $('[name=base_maior]').val(base_maior())
     $('[name=comprimento_silo]').val(comprimento_silo())
+
+    $('.chart_base_maior').text(base_maior())
+    $('.chart_base_menor').text(base_menor())
+    $('.chart_comprimento_silo').text(comprimento_silo())
+    $('.chart_altura_silo').text($('[name=altura_silo]').val())
+
   })
 
   $('[name=base_menor').on('change keyup', function(){

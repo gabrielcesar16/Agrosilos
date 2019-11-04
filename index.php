@@ -4,10 +4,7 @@
 		<title>Agro Silos</title>
 		<meta name="viewport" content="width=device-width, user-scalable=no">
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-		
-}
-		
+		<link rel="stylesheet" href="css/bootstrap.min.css">		
 	</head>
 	<body>
 
@@ -111,17 +108,15 @@
 										</div>
 
 										<div class="form-group">
-											<svg width="400" height="300" viewBox="0 0 100 100" preserveAspectRatio="none">
-											<g>
-  											<path fill="none" stroke="#000000" stroke-width="2" d="M 15,15 375,	15 295,175 95,175 15,15" />
-											</g>
-											<text x="140" y="10" font-family="sans-serif" font-size="12px" 	fill="red">Base Maior = </text>
-											<text x="230" y="10" font-family="sans-serif" font-size="12px" 	fill="red"> 12</text>
-											<text x="140" y="200" font-family="sans-serif" font-size="12px" 	fill="red">Base Menor = </text>
-											<text x="230" y="200" font-family="sans-serif" font-size="12px" 	fill="red"> 6</text>
-											</svg>
+										<div class="separator"></div>
+											<div class="set" style="width: 100%; height: auto; border: 1px solid #aaa; position: relative;">
+											  <img src="images/silo.png" style="width: 100%;">
+											  <div class="chart chart_base_maior">0</div>
+											  <div class="chart chart_base_menor">0</div>
+											  <div class="chart chart_comprimento_silo">0</div>
+											  <div class="chart chart_altura_silo">0</div>
+											</div>
 										</div>
-                                    </form>
                                 </div>
                             </div>
     	  				</div>
@@ -131,9 +126,9 @@
 							?>
 							<button type='submit' class='btn btn-green'>Gravar</button>
 							</form>
-							<button type="button" class="btn btn-green">Imprimir</button>
+							<button type="button" class="btn btn-green" onclick="print()">Imprimir</button>
 					  		<?php } ?>
-							<button type="button" class="btn btn-green">Fechar</button>
+							<button type="button" class="btn btn-green" data-dismiss="modal" aria-label="btn btn-green">Fechar</button>
     	  				</div>
   				</div>
 			</div>

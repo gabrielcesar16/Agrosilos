@@ -114,5 +114,6 @@ echo $query;
 
 ?>
 
+<script>print()</script>
 <hr>
 <a href="logout.php">Sair</a>
