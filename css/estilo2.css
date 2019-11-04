@@ -1,0 +1,23 @@
+
+  .navbar-custom {
+    color: #FFFFFF;
+    
+  }
+  .btn-green {
+      background-color: #558114;
+      color: white;
+  }
+  .td {
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.mobileHide { display: inline; }
+  			/* Smartphone Portrait and Landscape */
+  				@media only screen
+    		and (min-device-width : 320px)
+    		and (max-device-width : 480px){
+    		.mobileHide { display: none;}
+}

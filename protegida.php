@@ -13,7 +13,8 @@ $senha = $_SESSION["senha"];
 		echo "senha: " . $_SESSION["senha"]. "<br>";
 		*/
 
-$query = "SELECT nome FROM agricultor WHERE email = '$email' and senha = '$senha'";
+//$query = "SELECT nome FROM agricultor WHERE email = '$email' and senha = '$senha'";
+$query = "SELECT * FROM mensagem where id = '2'";
 $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_assoc($result);
 

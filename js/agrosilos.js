@@ -32,14 +32,7 @@ $(document).ready(function(){
   
   function area_secao()
   {
-    var espessura_fatia = $('[name=espessura_fatia]').val()
-    
-    return volume_dia() / espessura_fatia
-  } 
-  
-  function area_secao()
-  {
-    var espessura_fatia = $('[name=espessura_fatia]').val()
+    var espessura_fatia = $('[name=espessura_fatia]').val()/100
     
     return volume_dia() / espessura_fatia
   } 
@@ -62,6 +55,11 @@ $(document).ready(function(){
    function comprimento_silo()
   {
     return volume_silo() / area_secao()
+  } 
+
+  function espessura_diaria()
+  {
+    return volume_dia() / area_secao()
   } 
   
   $('[name=numero_animais]').on('change keyup', function(){
@@ -94,7 +92,7 @@ $(document).ready(function(){
     $('[name=comprimento_silo]').val(comprimento_silo())
   })
 
-  $('[name=densidade]').on('change keyup', function(){
+  $('[name=altura_silo]').on('change keyup', function(){
     $('[name=quantidade_silo]').val(quantidade_silo())
     $('[name=volume_silo]').val(volume_silo())
     $('[name=volume_dia]').val(volume_dia())
@@ -104,6 +102,37 @@ $(document).ready(function(){
     $('[name=comprimento_silo]').val(comprimento_silo())
   })
   
+  $('[name=espessura_fatia]').on('change keyup', function(){
+    $('[name=quantidade_silo]').val(quantidade_silo())
+    $('[name=volume_silo]').val(volume_silo())
+    $('[name=volume_dia]').val(volume_dia())
+    $('[name=area_secao]').val(area_secao())
+    $('[name=base_menor]').val(base_menor())
+    $('[name=base_maior]').val(base_maior())
+    $('[name=comprimento_silo]').val(comprimento_silo())
+  })
+  
+  $('[name=densidade]').on('change keyup', function(){
+    $('[name=quantidade_silo]').val(quantidade_silo())
+    $('[name=volume_silo]').val(volume_silo())
+    $('[name=volume_dia]').val(volume_dia())
+    $('[name=area_secao]').val(area_secao())
+    $('[name=base_menor]').val(base_menor())
+    $('[name=base_maior]').val(base_maior())
+    $('[name=comprimento_silo]').val(comprimento_silo())
+  })
+
+  $('[name=base_menor').on('change keyup', function(){
+    $('[name=quantidade_silo]').val(quantidade_silo())
+    $('[name=volume_silo]').val(volume_silo())
+    $('[name=volume_dia]').val(volume_dia())
+    $('[name=area_secao]').val(area_secao())
+    $('[name=base_menor]').val(base_menor())
+    $('[name=base_maior]').val(base_maior())
+    $('[name=comprimento_silo]').val(comprimento_silo())
+    $('[name=espessura_resultado]').val(espessura_diaria())
+
+  })
+  
   
 })
-

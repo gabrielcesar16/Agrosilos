@@ -1,3 +1,14 @@
+
+<?php
+
+session_start();
+
+	if(isset($_SESSION['logged'])){
+		header('location: user_account.php');
+	}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt">
 
@@ -14,28 +25,30 @@
   text-align: center;
 }
 
-.form-group.required .control-label:after {
-  content:"*";
-  color:red;
-}
 </style>
 
 <body>
 	<?php
-		include 'navbar.php';	
-		
+		include 'navbar.php';
 	?>
 
 	<div class="container">
 		<div class="card" style="width: 100%; margin-top: 50px">
 		  <!--<img src="..." class="card-img-top" alt="...">-->
 		  <div class="card-body">
-		    <h5 class="card-title">Cadastro</h5>
-		    <p class="card-text">Criar sua conta</p>
+		    <h5 class="card-title">Meu Perfil</h5>
+		    <p class="card-text">Configure seu perfil</p>
 
-		    <form method="POST" action="cadastro.php">
+		    <?php
+		    	if(isset($_SESSION['login_error'])){
+		    		echo '<div class="alert alert-danger" role="alert">Erro ao logar, verifique as credenciais!</div>';
+		    		unset($_SESSION['login_error']);
+		    	}
+		    ?>
+		    
+		    <form method="POST" action="update_system.php">
+			<div class="form-group required">
 
-				  <div class="form-group required">
 				    <label for="input-name" class="control-label">Nome</label>
 				    <input type="text" class="form-control" id="input-name" placeholder="Insira seu nome completo" name="nome" required value="Steve Jobs">
 				  </div>
@@ -53,12 +66,15 @@
 				    <label for="input-pass" class="control-label">Senha</label>
 				    <input type="password" class="form-control" id="input-pass" placeholder="Insira sua senha" name="senha" required>
 				  </div>
-				  <button type="submit" class="btn btn-green">Cadastrar</button>
+				  <button type="submit" class="btn btn-green">Atualizar</button>
 				</form>
 		  </div>
 		</div>
 	</div>
 	<br>
+	<br>
+	<br>
+	<br>			
 	<?php
 	include 'footer.php';
 	?>

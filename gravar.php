@@ -1,8 +1,10 @@
 <?php
 
 include "conexao.php"; 
+session_start();
 
-if (mysqli_connect_errno())
+
+if (mysqli_connect_error())
 	echo mysqli_connect_error();
 
 /*
@@ -84,7 +86,8 @@ $query = "INSERT INTO calculos
 	area_secao,             
 	base_menor,        
 	base_maior,        
-	comprimento_silo
+	comprimento_silo,
+	usuario_id
 )
 VALUES
 (
@@ -100,7 +103,8 @@ VALUES
 	'$area_secao',             
 	'$base_menor',        
 	'$base_maior',        
-	'$comprimento_silo'
+	'$comprimento_silo',
+	'".$_SESSION["id"]."'
 )";
 
 mysqli_query($conn, $query);

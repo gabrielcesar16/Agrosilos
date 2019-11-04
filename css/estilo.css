@@ -43,10 +43,6 @@
     color: black;
   } 
 
-  {
-    font-family: helvetica;
-  }
-
   body
   {
     background: #ddd;
@@ -88,7 +84,10 @@
     background-color: #f1f1f1;
   }
 
- 
+  .navbar-custom {
+    color: #FFFFFF;
+    
+  }
 
   
   

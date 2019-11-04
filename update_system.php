@@ -1,6 +1,7 @@
 <?php
 
 include "conexão.php";
+session_start();
 
 if (mysqli_connect_error())
 	echo mysqli_connect_error();
@@ -19,35 +20,29 @@ if ($conn->connect_error) {
 $nome = $_REQUEST['nome'];
 $propriedade = $_REQUEST['propriedade'];
 $email = $_REQUEST['email'];
-$senha = $_REQUEST['senha'];
-
+$senha = $_POST['senha'];
 $senha = md5($senha);
 
-echo "nome: $nome<br>";
-echo "propriedade: $propriedade<br>";
-echo "email: $email<br>";
-echo "senha: $senha<br>";
+/*
+echo "nome: " . $_POST['nome'] ."<br>";
+echo "propriedade: " . $_POST['propriedade']."<br>";
+echo "email: " . $_POST['email']."<br>";
+echo "senha: " . $_POST['senha']."<br>";
+echo $_SESSION[id];
+*/
+header("location:logout.php");
 
-$query = "INSERT INTO usuario
-(
-    nome,
-    email,
-    senha,
-    propriedade,
-    perfil
-)
-VALUES
-(
-    '$nome',
-    '$email',
-    '$senha',
-    '$propriedade',
-    'agricultor'
-)";
+$query = "UPDATE usuario SET
+    nome = '$_POST[nome]',
+    email = '$_POST[email]',
+    senha = '$senha',
+    propriedade = '$_POST[propriedade]'
+ where id = $_SESSION[id]";
 
 mysqli_query($conn, $query);
 mysqli_close($conn);
 
-echo $query;
-
 ?>
+
+<hr>
+<a href="logout.php">Sair</a>

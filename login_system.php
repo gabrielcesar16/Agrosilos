@@ -1,57 +1,44 @@
 <?php
 
 include "conexao.php"; 
-
-$email = $_REQUEST['email'];
-$senha = $_REQUEST['senha'];
-
-echo "email: $email<br>";
-echo "senha: $senha<br>";
-
-$query = "SELECT nome FROM agricultor WHERE email = '$email' && senha = '$senha'";
-$result = $conn->query($query);
-while ($querynavbar = mysqli_fetch_array($query)){
-	if($querynavbar['email'] == $email && $querynavbar['senha'] == $sehna){
-		$nome = $querynavbar['nome'];
-		break; 
-	}
-}
-
 session_start();
 
 
-if (!is_writable(session_save_path())) {
-    echo 'Session path "'.session_save_path().'" is not writable for PHP!'; 
-}
-else
-{
-    echo 'Session path "'.session_save_path().'" is writable for PHP!'; 
-}
+$email = $_REQUEST['email'];
+$senha = $_REQUEST['senha'];
+$senha = md5($senha);
 
+$query = "SELECT * FROM usuario WHERE email = '$email' && senha = '$senha'";
+$result = $conn->query($query);
+while ($querynavbar = mysqli_fetch_array($result)){
+	$nome = $querynavbar['nome'];
+	$id = $querynavbar['id'];
+}
 
 if (mysqli_num_rows($result) > 0) 
 {
-		echo "logado";
+		//echo "logado";
 		$_SESSION["email"] = $email;
-		$_SESSION["senha"] = $senha;
 		$_SESSION["senha"] = $senha;
 		$_SESSSION["nome"] = $nome;
 		$_SESSION["zim"] = "An invader from another planet.";
 		$_COOKIE["password"] = $senha;
-		$_SESSION["senha"] = $senha;
-
+		$_SESSION["id"] = $id;
+		$_SESSION["perfil"] = $perfil;
+	
 		$_SESSION['loggedin'] = true;
 
 		echo "<hr>";
 		echo "email: " . $_SESSION["email"] . "<br>";
 		echo "senha: " . $_SESSION["senha"]. "</br>";
-		header('location:index.php');
+		header('location:index.php?ok');
 } 
 else 
 {
-		echo "senha incorreta";
-
+		//echo "senha incorreta";
 		$_SESSION['loggedin'] = false;
+		$_SESSION['login_error'] = true;
+		header('location:loginfresco.php');
 
 
 
@@ -60,7 +47,4 @@ else
 mysqli_close($conn);
 
 
-?>
-
-<hr>
-<a href="logout.php">Sair</a>
+?>	

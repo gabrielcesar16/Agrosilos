@@ -1,3 +1,4 @@
+
 <html>
 	<head>
 		<title>Silagem</title>
@@ -12,26 +13,23 @@
 	include "navbar.php";
 					
 					
-	$query = "SELECT * FROM calculos";
+	$query = "SELECT * FROM calculos where usuario_id=".$_SESSION['id'].";";
 	$result = $conn->query($query);
 
 ?>
 		
 		<br>
-		<br>
-		
-		<div class="container">
-			<div class="row">
-			<div class="col-md-12 text-center">
-			<div class="container">	
+        <br>
 
-			<h4 align="left">Histórico</h1>
-			<hr>
+            
+			<div class="col text-center">
 
-            <div class="table-responsive-lg">
-             <table class="table">
-             <thead>
-            <tr>
+            <h4 align="left">Histórico</h1>
+            <div class="table-responsive-sm">
+             <table class="table table-hover table-sm  table-bordered table-striped ">
+             <thead class=>
+            <tr align="center" valign="center" float="center">
+                
                 <th scope="col">Data</th>
                 <th scope="col">Número de Animais</th>
                 <th scope="col">Dias de Fornecimento</th>
@@ -74,7 +72,7 @@
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-    	echo "<tr><th scope=\"row\">" . date("d/m/Y", strtotime($row["data"])) . "</th>";
+    	echo "<tr align='center' valign='center'><th scope=\"row\">" . date(" H:i - d/m/Y", strtotime($row["data"])) . "</th>";
         echo "<td>" . $row["numero_animais"] . "</td>";
         echo "<td>" . $row["dias_fornecimento"] . "</td>";
         echo "<td>" . $row["consumo_forragem"] . "</td>";
@@ -83,11 +81,12 @@ if ($result->num_rows > 0) {
         echo "<td>" . $row["densidade"] . "</td>";
         echo "<td>" . $row["quantidade_silo"] . "</td>";
         echo "<td>" . $row["volume_silo"] . "</td>";
-        echo "<td>" . $row["volume_dia "] . "</td>";
+        echo "<td>" . $row["volume_dia"] . "</td>";
         echo "<td>" . $row["area_secao"] . "</td>";
         echo "<td>" . $row["base_menor"] . "</td>";
         echo "<td>" . $row["base_maior"] . "</td>";
         echo "<td>" . $row["comprimento_silo"]. "</td>";
+        echo "<td><a style='color: red;' href='deletar_calculo.php?id=" . $row["id"] . "'>✕</a></td>";
         echo "</tr>";
     }
 } else {
@@ -99,7 +98,41 @@ if ($result->num_rows > 0) {
 	
 	$conn->close();
 ?>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+      
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<?php
+	include 'footer.php';
+?>
+
+<link rel="stylesheet" href="css/estilo2.css">
+		<script src="js/agrosilos.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
             
-           </tbody>
-             </table>
-            </div>
