@@ -27,9 +27,6 @@
                     <p align="justify"> Esse software que tem por objetivo dimensionar com precisão silos trincheira, buscando assim solucionar os problemas encontrados nos cálculos que são necessários para obtenção do resultado final, sendo eles a altura e a largura dos silos. Com isso, esperasse que o sistema ajude tanto os agropecuarista quanto os técnicos/zootecnistas, podendo contribuir para o avanço e desenvolvimento da criação de gados na região norte do Brasil. </p>
                     <br>
                     <hr>
-                    <div class="container">
-				            <div class="row">
-                    <div class="col">
                     <h4>Onde nos encontrar</h4>
 						        <p>
                       Agrosilos©
@@ -41,17 +38,19 @@
                     <p>
                     Av. Mal. Castelo Branco, 621 - Interventória, Santarém - PA, 68020-570
                     </p>
-					          </div>
+                    <hr>
+                  
 					          <div class="col">
 						        <h4> Redes Sociais</h4>
-						        <a class="btn btn-outline-light btn-social mx-1" href="https://facebook.com.br" target="_blank">
+						        <a class="btn btn-outline-dark btn-social mx-1" href="https://facebook.com.br" target="_blank">
 							      <i class="fab fa-fw fa-facebook-f"></i>
 						        </a>
-						        <a class="btn btn-outline-light btn-social mx-1" href="#">
+						        <a class="btn btn-outline-dark btn-social mx-1" href="#">
 							      <i class="fab fa-fw fa-whatsapp"></i>
 						        </a>
 					          </div>
 					          <div class="col">
+                    <br>
 						        <h4 class="text">Sobre a Empresa</h4>
 						        <p align="center">
                       Nosso blog oferece informações adicionais sobre a empresa<br>
@@ -69,10 +68,7 @@
   <br>
   <br>
   <br>
-  <br>
-  <br>
-  <br>
-
+ 
     <?php
 	    include 'footer.php';
 	  ?>

@@ -30,13 +30,16 @@
 .hero-image {
   background-image: url("images/login.jpg"); /* The image used */
   background-color: #cccccc; /* Used if the image is unavailable */
-  height: 600px; /* You must set a specified height */
+  height: 700px; /* You must set a specified height */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  overflow-x: hidden;
+  overflow-y: disabled;
+
 }
 
 </style>

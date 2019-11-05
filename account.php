@@ -32,7 +32,7 @@
 	<?php
 		include 'navbar.php';
 	?>
-
+	<br>
 	<div class="container">
 		<div class="card" style="width: 100%; margin-top: 50px">
 		  <!--<img src="..." class="card-img-top" alt="...">-->

@@ -39,10 +39,11 @@ $(document).ready(function(){
   
   function base_menor()
   {
-    //var area_secao = $('[name=area_secao]').val()
-    //var altura_silo = $('[name=altura_silo]').val()
+    var area_secao = $('[name=area_secao]').val()
+    var altura_silo = $('[name=altura_silo]').val()
     
-    return (area_secao() - 1) / 2
+    
+    return (area_secao/altura_silo) - 0.5
   } 
   
   //console.log(base_menor())
@@ -140,6 +141,14 @@ $(document).ready(function(){
     $('.chart_comprimento_silo').text(comprimento_silo())
     $('.chart_altura_silo').text($('[name=altura_silo]').val())
     
+  })
+
+  $('[name=espessura_fatia]').on('blur', function(){
+    if(parseInt($(this).val()) < 20)
+    {
+      alert('Valor mínimo aceito para Espessura da Fatia é 20.')
+      $(this).focus()
+    }
   })
   
   $('[name=densidade]').on('change keyup', function(){

@@ -6,17 +6,19 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="css/bootstrap.min.css">		
 	</head>
-	<body>
+	<body body style="background-image:images/login.jpg">
 
 			<?php
 				include 'navbar.php';
 			?>
 		
-		<br>		
-		<div class="container">
+		<br>
+		<br>
+		
+		<div class="container col-md-6 rounded" style="background-color: white;">
 			<div class="form-row">
 				<div class=" form-group col">
-			
+				<br>
 				<h4 align="left">Inserir</h4>
 				<hr>
 
@@ -44,7 +46,7 @@
 
 				<div class="form-group col">
 					<label for="inputtext" > <a href="index.php "><img src="images/mudar.png"></a> Espessura da fatia a ser retirada diariamente (cm)</label>
-					<input type="number" class="form-control" name="espessura_fatia" placeholder="" value="15">
+					<input type="number" class="form-control" name="espessura_fatia" placeholder="" value="" min="20">
 				</div>
 
 				<div class="form-group col">
@@ -133,7 +135,7 @@
   				</div>
 			</div>
 		</div>
-
+			<br>						
 			<?php
 				include 'footer.php';
 			?>

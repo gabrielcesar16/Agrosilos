@@ -108,12 +108,10 @@ VALUES
 )";
 
 mysqli_query($conn, $query);
+header('location:index.php?ok');
 mysqli_close($conn);
 
-echo $query;
 
 ?>
 
-<script>print()</script>
-<hr>
-<a href="logout.php">Sair</a>
+<!-- <script>print()</script> -->
