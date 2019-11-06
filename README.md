@@ -6,9 +6,9 @@ Trench silo scaling Calculator, has result history and a result printing option,
 
 * [HTML](https://whatwg.org/) - For site structure
 * [JAVASCRIPT](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - For calculations and other minor features
-* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) - For styling
-* [PHP](https://www.php.net/) - For CRUD operations.
-* [MYSQL](https://www.mysql.com/) - For the database.
+* [BOOTSTRAP](https://getbootstrap.com/) - For styling
+* [PHP](https://www.php.net/) - For CRUD operations
+* [MYSQL](https://www.mysql.com/) - For the database
 
 ## Contributing
 

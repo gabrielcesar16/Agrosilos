@@ -108,7 +108,7 @@ VALUES
 )";
 
 mysqli_query($conn, $query);
-header('location:index.php?ok');
+header('location:calculadora.php?ok');
 mysqli_close($conn);
 
 

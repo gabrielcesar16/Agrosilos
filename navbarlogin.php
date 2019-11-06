@@ -37,8 +37,9 @@ $nrow = mysqli_fetch_assoc($nresult);
 
 
 <nav class="navbar navbar-expand navbar-dark" style="background-color:#558114; color:white;">
+
   <a class="navbar-brand" href="index.php"style="color: white;" >
-    <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    <img src="images/logo.svg" width="30" height="30" class="d-inline-block align-top" alt="">
     Agro Silos
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

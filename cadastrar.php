@@ -25,7 +25,6 @@
 		include 'navbar.php';	
 		
 	?>
-
 	<div class="container">
 		<div class="card" style="width: 100%; margin-top: 50px">
 		  <!--<img src="..." class="card-img-top" alt="...">-->
@@ -53,6 +52,7 @@
 				    <label for="input-pass" class="control-label">Senha</label>
 				    <input type="password" class="form-control" id="input-pass" placeholder="Insira sua senha" name="senha" required>
 				  </div>
+				  <br>
 				  <button type="submit" class="btn btn-green">Cadastrar</button>
 				</form>
 		  </div>

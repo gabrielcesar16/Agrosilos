@@ -31,14 +31,14 @@ if (mysqli_num_rows($result) > 0)
 		echo "<hr>";
 		echo "email: " . $_SESSION["email"] . "<br>";
 		echo "senha: " . $_SESSION["senha"]. "</br>";
-		header('location:index.php?ok');
+		header('location:menu.php?ok');
 } 
 else 
 {
 		//echo "senha incorreta";
 		$_SESSION['loggedin'] = false;
 		$_SESSION['login_error'] = true;
-		header('location:loginfresco.php');
+		header('location:index.php');
 
 
 
