@@ -1,16 +1,39 @@
-
-<html>
+<!DOCTYPE HTML>
+<html lang = "en">
 	<head>
-		<title>Silagem</title>
+		<title>Agro Silos</title>
 		<meta name="viewport" content="width=device-width, user-scalable=no">
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="css/bootstrap.min.css">
-	</head>
-	<body>
+        <style type="text/css">
+        html *
+        {
+            font-size: 24px !important;
+            color: #000 !important;
+            font-family: Arial !important;
+        }
+        table *
+        {
+          font-size: 18px !important;
+          color: #000 !important;
+          font-family: Arial !important;
 
-<?php
-	include "conexao.php"; 
-    include "navbar.php";
+        }
+
+        .center {
+          padding: 70px 0;
+          border: 3px solid green;
+          text-align: center;
+        }
+
+        </style>		
+
+	</head>
+
+	<body>
+  
+  <?php
+	  include "conexao.php"; 
     include "permissao_agricultor.php";
 
 					
@@ -19,39 +42,20 @@
 	$result = $conn->query($query);
 
 ?>
+
+	<br>
+	<br>
 		
-		<br>
-        <br>
-
-            
-			<div class="col text-center">
-
-            <h4 align="left">Histórico</h1>
-            <div class="table-responsive-sm">
-             <table class="table table-hover table-sm  table-bordered table-striped ">
-             <thead class=>
-            <tr align="center" valign="center" float="center">
-                
-                <th scope="col">Data</th>
-                <th scope="col">Número de Animais</th>
-                <th scope="col">Dias de Fornecimento</th>
-                <th scope="col">Consumo por dia</th>
-                <th scope="col">Altura do Silo</th>
-                <th scope="col">Espessura diaria</th>
-                <th scope="col">Densidade considerada</th>
-                <th scope="col">Quantidade de silagem </th>
-                <th scope="col">Volume do silo</th>
-                <th scope="col">Volume diário</th>
-                <th scope="col">Área da seção</th>
-                <th scope="col">Base menor</th>
-                <th scope="col">Base Maior</th>
-                <th scope="col">Comprimento do Silo</th>
-             </tr>
-             </thead>
-            <tbody>
-            
-            
-<?php
+                <h1> 
+                <img src="images/logo.svg" width="60" height="60" class="d-inline-block align-top" alt=""></img>
+                Agro Silos</h1>
+                <hr>
+                <br>
+                <h4>Usuario : Joao Silva</h4>
+                   <h4>Propriedade : Azul</h4><br>
+    				<h4 align="left">Resultados</h4>
+            <br>
+            <?php
 
 /*
     numero_animais INTEGER DEFAULT 0,
@@ -74,7 +78,6 @@
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-    	echo "<tr align='center' valign='center'><th scope=\"row\">" . date(" H:i - d/m/Y", strtotime($row["data"])) . "</th>";
         echo "<td>" . $row["numero_animais"] . "</td>";
         echo "<td>" . $row["dias_fornecimento"] . "</td>";
         echo "<td>" . $row["consumo_forragem"] . "</td>";
@@ -100,36 +103,26 @@ if ($result->num_rows > 0) {
 	
 	$conn->close();
 ?>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-      
-
-<br>
-
-
-
-<div class="" style="
- 		position: absolute;
-  		bottom: 0;
-  		width: 100%;
-  		height: 2.5rem;
-        	    		">						
-			<?php
-				include 'footer.php';
-			?>
-			</div>
-
-<link rel="stylesheet" href="css/estilo2.css">
+                    <br>
+                    <div class="form-group">
+										<div class="separator"></div>
+											<div class="set" style="width: 40%; height: 50%; border: 1px solid #aaa; position: relative; left:50%; margin-left:-20%;">
+											  <img src="images/silo.png" style="width: 100%;">
+											  <div class="chart chart_base_maior">0</div>
+											  <div class="chart chart_base_menor">0</div>
+											  <div class="chart chart_comprimento_silo">0</div>
+											  <div class="chart chart_altura_silo">0</div>
+											</div>
+										</div>
+        
+        
+        
+    		<link rel="stylesheet" href="css/estilo2.css">
 		<script src="js/agrosilos.js"></script>
 		<script src="js/jquery.min.js"></script>
 		<script src="js/popper.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-
-
-</body>
+  	</body>
 </html>
-            
+  
+

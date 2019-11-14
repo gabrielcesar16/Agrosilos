@@ -31,7 +31,8 @@ session_start();
 	<?php
 		include 'navbar.php';
 	?>
-
+	<br>
+		
 	<div class="container">
 		<div class="card" style="width: 100%; margin-top: 50px">
 		  <!--<img src="..." class="card-img-top" alt="...">-->
@@ -71,13 +72,18 @@ session_start();
 		  </div>
 		</div>
 	</div>
-	<br>
-	<br>
-	<br>
-	<br>			
+	<div style=
+	"
+	 position: absolute;
+  	bottom: 0;
+  	width: 100%;
+  	height: 2.5rem;
+	"
+	>
 	<?php
 	include 'footer.php';
 	?>
+	</div>
   
   <link rel="stylesheet" href="css/estilo2.css">
   <script src="js/popper.min.js"></script>

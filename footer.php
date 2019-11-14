@@ -1,4 +1,4 @@
-<footer style=" background-color: #558114; width: 100%;" class="footer">
+<footer style=" background-color: #558114; width: 100%; min-height:8vh;" class="page-footer font-small">
       <div class="container">
         <br>
         <div class="footer-copyright text-center" style="color: white"> © 2019 Copyright: Agrosilos </div>

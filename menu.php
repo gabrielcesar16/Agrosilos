@@ -42,6 +42,15 @@
                           <br>
                           <br>
                           Histórico
+                          <?php if ($email & $senha){
+                          ?>
+                          </li>
+                          <?php
+                           }else{
+                          ?>
+                         <p style=" color:white; font-size: 11px;" >*dispónivel somente para usuários logados</p>
+                          <?php
+                           }?>
                           <br>
                           <br>
                           <br>
@@ -67,9 +76,8 @@
                         </a>
                         </div>
                     </div>
-                    <br>
-                    <br>
-                    <hr size="30">
+                    
+                    <hr size="20">
 
                     <a href="sobre.php" style= "color:white; font-style:bold; font-size:16px;">
                     Sobre nós
@@ -79,14 +87,15 @@
     </div>
     </div>
     </div>
-
-  <br>
-  <br>
-  <br>
- 
+    <div class="" style="
+        position: bottom;
+        width: 100%;
+        top: 100%;
+    ">
     <?php
 	    include 'footer.php';
 	  ?>
+    </div>
 
     <link rel="stylesheet" href="css/estilo2.css">
 		<script src="js/agrosilos.js"></script>

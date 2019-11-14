@@ -85,7 +85,7 @@ $nrow = mysqli_fetch_assoc($nresult);
         <?php
         }else{
         ?>
-          <a style='color: white' href='account.php'>
+          <a style='color: white' href='index.php'>
           <img src='images/outline-account_circle-24px.svg' width='30' alt='Conta'>
           Entrar
           </a>
@@ -100,6 +100,6 @@ $nrow = mysqli_fetch_assoc($nresult);
     <script src="css/bootstrap.js"></script>
     <script src="css/estilo2.css"></script>
 
-<div style="margin-bottom: 30px"></div>
+<div style="margin-bottom: 20px"></div>
   </body>
 </html>

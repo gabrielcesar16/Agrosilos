@@ -2,7 +2,7 @@
 <html lang = "en">
 	<head>
 		<title>Agro Silos</title>
-		<meta name="viewport" content="width=device-width, user-scalable=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<style type="text/css">
@@ -16,20 +16,7 @@
 		   .mobileHide { display: none;}
 		}
 
-		.hero-image {
-			  background-image: url("images/login.jpg"); /* The image used */
-			  background-color: #cccccc; /* Used if the image is unavailable */
-			  height: 100%; /* You must set a specified height */
-			  width: 100%; /* You must set a specified height */
-			  background-position: center; /* Center the image */
-			  background-repeat: no-repeat; /* Do not repeat the image */
-			  background-size: cover; /* Resize the background image to cover the entire container */
-			  -webkit-background-size: cover;
-			  -moz-background-size: cover;
-			  -o-background-size: cover;
-			  overflow-x: hidden;
-			  overflow-y: disabled;		
-		}
+		
 </style>		
 	</head>
 
@@ -39,8 +26,7 @@
 			<?php
 				include 'navbar.php';
 			?>
-	
-		<div class="container col-sm-6 rounded" style="background-color: white;">
+		<div class="container col-sm-6 rounded" style="background-color: white; ">
 			<div class="form-row">
 				<div class=" form-group col">
 				<br>
@@ -65,12 +51,12 @@
 				</div>
 
 				<div class="form-group col">
-					<label for="inputtext" >Altura do Silo (m)</label>
+					<label for="inputtext" > H - Altura do Silo (m)  <p style=" color:red; font-size: 10px; display:inline;" >*mínimo de 2 metros e máximo de 4 metros</p></label>
 					<input name="altura_silo"  class="form-control " type="number" min="2" max="4" step=0.1 value="2"> 
 				</div>
 
 				<div class="form-group col">
-					<label for="inputtext" > <a href="index.php "><img src="images/mudar.png"></a> Espessura da fatia a ser retirada diariamente (cm) *mínimo de 20 cm </label>
+					<label for="inputtext" > <a href="index.php "><img src="images/mudar.png"></a> Espessura da fatia a ser retirada diariamente (cm)  <p style=" color:red; font-size: 10px; display:inline;" >*mínimo de 20 cm</p> </label>
 					<input type="number" class="form-control" name="espessura_fatia" placeholder="" value="" min="20">
 				</div>
 
@@ -154,7 +140,7 @@
 										</div>
 
 										<div class="form-group">
-											<label for="inputtext" > CS - Comprimento do Silo (m)</label>
+											<label for="inputtext" > C - Comprimento do Silo (m)</label>
 											<input type="text" class="form-control  " name="comprimento_silo" placeholder="" readonly="readonly">
 										</div>
 
@@ -166,7 +152,14 @@
 											  <div class="chart chart_base_menor">0</div>
 											  <div class="chart chart_comprimento_silo">0</div>
 											  <div class="chart chart_altura_silo">0</div>
+
 											</div>
+											<p style=" color:black; font-size: 10px; display:inline; font-weight: bold;" > B - Base maior do silo</p><br>
+											<p style=" color:black; font-size: 10px; display:inline; font-weight: bold" >H - Altura do silo</p><br>
+											<p style=" color:black; font-size: 10px; display:inline; font-weight: bold" > b - Base menor do silo</p><br>
+											<p style=" color:black; font-size: 10px; display:inline; font-weight: bold" > AS  - Area da seção do silo</p><br>
+											<p style=" color:black; font-size: 10px; display:inline; font-weight: bold" > C - Comprimento do silo</p><br>
+
 										</div>
                                 </div>
                             </div>
@@ -176,19 +169,25 @@
 					  		<?php if ($email && $senha) {
 							?>
 							<button type='submit' class='btn btn-green'>Gravar</button>
+							<button type="submit" formaction="imprimir.php"  class="btn btn-green">Imprimir</button>
 							</form>
-							<button type="button" class="btn btn-green" onclick="print()">Imprimir</button>
 					  		<?php } ?>
 							<button type="button" class="btn btn-green" data-dismiss="modal" aria-label="btn btn-green">Fechar</button>
     	  				</div>
   				</div>
 			</div>
 		</div>
-			<br>						
+	</div>
+	<div class="" style="
+ 		position: ;
+  		bottom: 0;
+  		width: 100%;
+  		height: 2.5rem;
+        	    		">						
 			<?php
 				include 'footer.php';
 			?>
-		
+			</div>
 		<link rel="stylesheet" href="css/estilo2.css">
 		<script src="js/agrosilos.js"></script>
 		<script src="js/jquery.min.js"></script>

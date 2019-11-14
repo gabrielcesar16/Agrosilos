@@ -68,6 +68,7 @@
 				  <div class="form-group required">
 				    <label for="input-pass" class="control-label">Senha</label>
 				    <input type="password" class="form-control" id="input-pass" placeholder="Insira sua senha" name="senha" required>
+					<a style="font-size: 10px; display:inline;" href="menu.php" class="">Entrar sem cadastro</a>
 				  </div>
                   <?php
 		    	        if(isset($_SESSION['login_error'])){
@@ -78,6 +79,7 @@
                   <br>
 				  <button type="submit" class="btn btn-green">Entrar</button>
 				  <a href="cadastrar.php" class="btn btn-success">Cadastrar</a>
+				  
                    
                   <br>
                   <br>
@@ -88,10 +90,10 @@
 
 	</div>
 	<div class="" style="
-        position: fixed;
+        position: bottom;
         width: 100%;
         top: 100%;
-        margin-top: -70px;
+
     ">
 	<?php
 	include 'footer.php';

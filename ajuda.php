@@ -1,3 +1,5 @@
+
+
 <html>
 <head>
   <title>Silagem</title>
@@ -59,9 +61,15 @@
 			<br>
 		</div>
 
-    <?php
-	include 'footer.php';
-	?>
+        <div class="" style="
+        	position: bottom;
+        	width: 100%;
+        	top: 100%;
+    		">						
+			<?php
+				include 'footer.php';
+			?>
+			</div>
 
     <link rel="stylesheet" href="css/estilo2.css">
 		<script src="js/agrosilos.js"></script>

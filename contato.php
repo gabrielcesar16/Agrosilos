@@ -36,11 +36,17 @@
           </div>      
         </div>
     </div>
-  <br>
   
-     <?php
-	    include 'footer.php';
-	  ?>
+      <div class="" style="
+        	 position: absolute;
+  		bottom: 0;
+  		width: 100%;
+  		height: 2.5rem;
+    		">						
+		  	<?php
+				  include 'footer.php';
+			  ?>
+			</div>
 
 
     

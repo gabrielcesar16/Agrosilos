@@ -8,8 +8,8 @@ $(document).ready(function(){
     var numero_animais = $('[name=numero_animais]').val()
     var dias_fornecimento = $('[name=dias_fornecimento]').val()
     var consumo_forragem = $('[name=consumo_forragem]').val()
-
-    return (numero_animais * dias_fornecimento * consumo_forragem) * 1.15
+    var result = (numero_animais * dias_fornecimento * consumo_forragem) * 1.15;
+    return result
   }
     
   function volume_silo()
@@ -43,7 +43,8 @@ $(document).ready(function(){
     var altura_silo = $('[name=altura_silo]').val()
     
     
-    return (area_secao/altura_silo) - 0.5
+    var result = (area_secao/altura_silo)-0.5
+    return result
   } 
   
   //console.log(base_menor())
@@ -143,11 +144,24 @@ $(document).ready(function(){
     
   })
 
+  $('[name=altura_silo]').on('blur', function(){
+    if(parseInt($(this).val()) < 2)
+    {
+      alert('Alert 2')
+      
+    }
+  })
+
+
   $('[name=espessura_fatia]').on('blur', function(){
     if(parseInt($(this).val()) < 20)
     {
-      alert('Valor mínimo aceito para Espessura da Fatia é 20.')
+      alert('Valor mínimo aceito para Espessura da Fatia é 20 centímetros.')
       $(this).focus()
+      alert = function() {};
+      document.getElementById("btn_calcular").disabled = true; 
+      unable
+
     }
   })
   
@@ -179,18 +193,5 @@ $(document).ready(function(){
 
   })
 
-  // Get the input field
-var input = document.getElementById("densidade");
-
-// Execute a function when the user releases a key on the keyboard
-input.addEventListener("keyup", function(event) {
-  // Number 13 is the "Enter" key on the keyboard
-  if (event.keyCode === 13) {
-    // Cancel the default action, if needed
-    event.preventDefault();
-    // Trigger the button element with a click
-    document.getElementById("btn_calcular").click();
-  }
-}); 
   
 })

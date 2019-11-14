@@ -25,7 +25,6 @@ CREATE TABLE calculos
     volume_silo FLOAT DEFAULT 0.0,
     volume_dia FLOAT DEFAULT 0.0,
     area_secao FLOAT DEFAULT 0.0,
-    tamanho_base FLOAT DEFAULT 0.0,
     base_menor FLOAT DEFAULT 0.0,
     base_maior FLOAT DEFAULT 0.0,
     comprimento_silo FLOAT DEFAULT 0.0,
