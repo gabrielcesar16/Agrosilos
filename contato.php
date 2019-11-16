@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
-<body>
+<body style="min-height:92vh;">
 
   <?php
         include 'navbar.php';
@@ -31,23 +31,19 @@
                 </div>
             </form>
             </div>
-      	            
-
           </div>      
         </div>
     </div>
   
-      <div class="" style="
-        	 position: absolute;
+    <div class="" style="
+ 		position: absolute;
   		bottom: 0;
   		width: 100%;
-  		height: 2.5rem;
-    		">						
-		  	<?php
-				  include 'footer.php';
-			  ?>
+        	    		">						
+			<?php
+				include 'footer.php';
+			?>
 			</div>
-
 
     
     <link rel="stylesheet" href="css/estilo2.css">

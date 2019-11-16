@@ -193,5 +193,11 @@ $(document).ready(function(){
 
   })
 
+  function doPrint() {
+  window.print();            
+  document.location.href = "calculadora.php"; 
+
+}
+
   
 })

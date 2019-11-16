@@ -67,7 +67,7 @@ input:focus
 {
   position: absolute; 
   background: white;
-  width: 40px;
+  width: 45px;
   overflow: hidden;
 }
 
@@ -100,5 +100,20 @@ input:focus
   left: 70%; 
 }
 /* chart_end */
+
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1 0 auto;
+}
+.footer {
+  flex-shrink: 0; 
+}
+
 
 

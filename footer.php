@@ -1,11 +1,24 @@
-<footer style=" background-color: #558114; width: 100%; min-height:8vh;" class="page-footer font-small">
-      <div class="container">
-        <br>
-        <div class="footer-copyright text-center" style="color: white"> © 2019 Copyright: Agrosilos </div>
-        <br>
-      </div>
-    </footer>
+<!DOCTYPE HTML>
+<html lang = "en">
+	<head>
+		<title>Agro Silos</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<style type="text/css">
+  
+}
 
+</style>
+ </head>
+<body>		
+
+<footer class="page-footer" style=" background-color: #558114;
+  color: #fff;
+  padding: 20px;">
+    <div class="footer-copyright text-center" style="color: white"> © 2019 Copyright: Agrosilos </div>
+</footer>
+  </body>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -13,3 +26,4 @@
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
     <script src="../../assets/js/vendor/popper.min.js"></script>
     <script src="../../dist/js/bootstrap.min.js"></script>
+</html>

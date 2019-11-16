@@ -2,7 +2,7 @@
 <html lang = "en">
 	<head>
 		<title>Agro Silos</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="viewport" content="width=device-width, user-scalable=no">
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<style type="text/css">
@@ -14,20 +14,19 @@
 		  and (min-device-width : 320px)
 		  and (max-device-width : 480px){
 		   .mobileHide { display: none;}
-		}
+		}}
 
-		
 </style>		
 	</head>
-
-	<body>
 	<br>
-	<br>
-			<?php
+	<body>			
+		<?php
 				include 'navbar.php';
 			?>
+		<br>
 		<div class="container col-sm-6 rounded" style="background-color: white; ">
-			<div class="form-row">
+			
+		<div class="form-row">
 				<div class=" form-group col">
 				<br>
 				<h4 align="left">Inserir</h4>
@@ -169,7 +168,7 @@
 					  		<?php if ($email && $senha) {
 							?>
 							<button type='submit' class='btn btn-green'>Gravar</button>
-							<button type="submit" formaction="imprimir.php"  class="btn btn-green">Imprimir</button>
+							<button type="submit" formaction="gravar_imprimir.php"  class="btn btn-green">Imprimir</button>
 							</form>
 					  		<?php } ?>
 							<button type="button" class="btn btn-green" data-dismiss="modal" aria-label="btn btn-green">Fechar</button>
@@ -177,17 +176,24 @@
   				</div>
 			</div>
 		</div>
+			
+
+
+		
 	</div>
-	<div class="" style="
- 		position: ;
+	
+
+	<div class="foot" style="
+ 		position: relative;
   		bottom: 0;
   		width: 100%;
-  		height: 2.5rem;
-        	    		">						
+        ">						
 			<?php
 				include 'footer.php';
 			?>
-			</div>
+	</div>
+
+
 		<link rel="stylesheet" href="css/estilo2.css">
 		<script src="js/agrosilos.js"></script>
 		<script src="js/jquery.min.js"></script>

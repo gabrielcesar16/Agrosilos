@@ -6,13 +6,24 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="css/bootstrap.min.css">
         <style type="text/css">
-        html *
+       
+       
+       body *
         {
             font-size: 24px !important;
-            color: #000 !important;
+            color: #000;
             font-family: Arial !important;
         }
-        table *
+
+        .dropdown-item *
+        {
+          
+          color: black !important;
+          font-family: Arial !important;
+
+        }
+        
+        .info *
         {
           font-size: 18px !important;
           color: #000 !important;
@@ -26,103 +37,134 @@
           text-align: center;
         }
 
+        @media print
+        {    
+          .no-print, .no-print *
+        {
+          display: none !important;
+        }
+}
+
         </style>		
-
-	</head>
-
-	<body>
+   
+  </head>
+  <br>
+  <div class='no-print' style="color:white">
+      <div style="text-align: center;">
+      <a href="calculadora.php" class="btn btn-success btn-lg" style="color:white" role="button" aria-disabled="true">Voltar</a>
+      </div>
+  </div>
+  
+  <body onload="window.print()">
   
   <?php
-	  include "conexao.php"; 
-    include "permissao_agricultor.php";
+	session_start();
+  include "conexao.php"; 
 
+  $email = $_SESSION["email"];
+  $senha = $_SESSION["senha"];
 					
-					
-	$query = "SELECT * FROM calculos where usuario_id=".$_SESSION['id'].";";
-	$result = $conn->query($query);
+	$query = "SELECT * FROM calculos where usuario_id=".$_SESSION['id']." order by data desc;";
+  $result = $conn->query($query);
+  $row = mysqli_fetch_assoc($result);
+  
+  $nquery = "SELECT * FROM usuario WHERE email = '$email' and senha = '$senha'";
+  $nresult = mysqli_query($conn, $nquery);
+  $nrow = mysqli_fetch_assoc($nresult);
 
 ?>
 
-	<br>
-	<br>
-		
+	
+
                 <h1> 
                 <img src="images/logo.svg" width="60" height="60" class="d-inline-block align-top" alt=""></img>
                 Agro Silos</h1>
                 <hr>
                 <br>
-                <h4>Usuario : Joao Silva</h4>
-                   <h4>Propriedade : Azul</h4><br>
+                <h4>Usuario : <?= $nrow["nome"] ?></h4>
+                   <h4>Propriedade : <?= $nrow["propriedade"] ?></h4><br>
     				<h4 align="left">Resultados</h4>
             <br>
-            <?php
 
-/*
-    numero_animais INTEGER DEFAULT 0,
-    dias_fornecimento INTEGER DEFAULT 0,
-    consumo_forragem INTEGER DEFAULT 0,
-    altura_silo INTEGER DEFAULT 0,
-    espessura_fatia FLOAT DEFAULT 0.0,
-    densidade INTEGER DEFAULT 0,
+          <table border=1 style="width:100%">
+            <tr>
+              <th>Quantidade de silagem(kg)</th>
+              <td><?= $row["quantidade_silo"] ?></td>
+            </tr>
+            <tr>
+              <th>VS - Volume do silo (m³)</th>
+              <td><?= $row["volume_silo"] ?></td>
 
-    quantidade_silo FLOAT DEFAULT 0.0,
-    volume_silo FLOAT DEFAULT 0.0,
-    volume_dia FLOAT DEFAULT 0.0,
-    area_secao FLOAT DEFAULT 0.0,
-    tamanho_base FLOAT DEFAULT 0.0,
-    base_menor FLOAT DEFAULT 0.0,
-    base_maior FLOAT DEFAULT 0.0,
-    comprimento_silo FLOAT DEFAULT 0.0,
-    */
+              </th>
+            </tr>
+            <tr>
+              <th>VD - Volume diário (m³)</th>
+              <td><?= $row["volume_dia"] ?></td>
 
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo "<td>" . $row["numero_animais"] . "</td>";
-        echo "<td>" . $row["dias_fornecimento"] . "</td>";
-        echo "<td>" . $row["consumo_forragem"] . "</td>";
-        echo "<td>" . $row["altura_silo"] . "</td>";
-        echo "<td>" . $row["espessura_fatia"] . "</td>";
-        echo "<td>" . $row["densidade"] . "</td>";
-        echo "<td>" . $row["quantidade_silo"] . "</td>";
-        echo "<td>" . $row["volume_silo"] . "</td>";
-        echo "<td>" . $row["volume_dia"] . "</td>";
-        echo "<td>" . $row["area_secao"] . "</td>";
-        echo "<td>" . $row["base_menor"] . "</td>";
-        echo "<td>" . $row["base_maior"] . "</td>";
-        echo "<td>" . $row["comprimento_silo"]. "</td>";
-        echo "<td><a style='color: red;' href='deletar_calculo.php?id=" . $row["id"] . "'>✕</a></td>";
-        echo "</tr>";
-    }
-} else {
-    echo "0 results";
-}
+            </tr>
+            <tr>
+              <th>AS - Área da seção a ser retirada por dia (m²)</th>
+              <td><?= $row["area_secao"] ?></td>
+            </tr>
+
+            <tr>
+              <th>b - Base Menor do Silo (m)</th>
+              <td><?= $row["base_menor"] ?></td>
+            </tr>
+
+            <tr>
+              <th>B - Base Maior do Silo (m)</th>
+              <td><?= $row["base_maior"] ?></td>
+            </tr>
+
+            <tr>
+              <th>C - Comprimento do Silo (m)</th>
+              <td><?= $row["comprimento_silo"] ?></td>
+            </tr>
 
 
 
-	
-	$conn->close();
-?>
-                    <br>
+
+
+          </table>
+
+          <br>
                     <div class="form-group">
 										<div class="separator"></div>
-											<div class="set" style="width: 40%; height: 50%; border: 1px solid #aaa; position: relative; left:50%; margin-left:-20%;">
+											<div class="set" style="width: 40%; height: 50%; border: 0px solid #aaa; position: relative; left:50%; margin-left:-20%;">
 											  <img src="images/silo.png" style="width: 100%;">
-											  <div class="chart chart_base_maior">0</div>
-											  <div class="chart chart_base_menor">0</div>
-											  <div class="chart chart_comprimento_silo">0</div>
-											  <div class="chart chart_altura_silo">0</div>
+											  <div class="chart chart_base_maior"><?= $row["base_maior"] ?></div>
+											  <div class="chart chart_base_menor "  style="top: 185%;   width: 68px;
+"><?= $row["base_menor"] ?></div>
+											  <div class="chart chart_comprimento_silo" style="top: 40%; left:-5%;"><?= $row["comprimento_silo"] ?></div>
+											  <div class="chart chart_altura_silo" style="top: 110%; left:100%;";><?= $row["altura_silo"] ?></div>
 											</div>
-										</div>
+                    </div>
+                    
+                    <div class="info">
+                    <p style=" color:black; font-size: 10px; display:inline; font-weight: bold;" > B - Base maior do silo</p><br>
+										<p style=" color:black; font-size: 10px; display:inline; font-weight: bold" >H - Altura do silo</p><br>
+										<p style=" color:black; font-size: 10px; display:inline; font-weight: bold" > b - Base menor do silo</p><br>
+										<p style=" color:black; font-size: 10px; display:inline; font-weight: bold" > AS  - Area da seção do silo</p><br>
+                    <p style=" color:black; font-size: 10px; display:inline; font-weight: bold" > C - Comprimento do silo</p><br>
+                  </div>
+
+           
+            <?php
+              $conn->close();
+            ?>
+                    
         
         
         
-    		<link rel="stylesheet" href="css/estilo2.css">
+    <link rel="stylesheet" href="css/estilo2.css">
 		<script src="js/agrosilos.js"></script>
 		<script src="js/jquery.min.js"></script>
 		<script src="js/popper.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-  	</body>
+    </body>
+    
+    
 </html>
   
 
