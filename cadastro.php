@@ -5,11 +5,6 @@ include "conexão.php";
 if (mysqli_connect_error())
 	echo mysqli_connect_error();
 
-$servidor ="localhost";
-$usuario ="admin";
-$senha ="admin";
-$dbname ="20162290202";
-
 $conn = mysqli_connect($servidor, $usuario, $senha, $dbname);
 
 // Check connection

@@ -36,22 +36,22 @@
 
 				<div class="form-group col">
 				<label for="inputtext" >Número de Animais</label>
-				<input type="number" class="form-control " name="numero_animais" placeholder="" value="20" min="1" max="1024">
+				<input type="number" class="form-control " name="numero_animais" placeholder="" min="1" max="1024">
 				</div>
 
 				<div class="form-group col">
 					<label for="inputtext" >Dias de Fornecimento</label>
-					<input type="number" class="form-control " name="dias_fornecimento" placeholder="" value="100" min="1" max="1024">
+					<input type="number" class="form-control " name="dias_fornecimento" placeholder="" min="1" max="1024">
 				</div>
 
 				<div class="form-group col">
 					<label for="inputtext" >Consumo de forragem de cada animal por dia (kg)</label>
-					<input type="number" class="form-control " name="consumo_forragem" placeholder="" value="35" min="1" max="1024">
+					<input type="number" class="form-control " name="consumo_forragem" placeholder="" min="1" max="1024">
 				</div>
 
 				<div class="form-group col">
 					<label for="inputtext" > H - Altura do Silo (m)  <p style=" color:red; font-size: 10px; display:inline;" >*mínimo de 2 metros e máximo de 4 metros</p></label>
-					<input name="altura_silo"  class="form-control " type="number" min="2" max="4" step=0.1 value="2"> 
+					<input name="altura_silo"  class="form-control " type="number" min="2" max="4" step=0.1 va> 
 				</div>
 
 				<div class="form-group col">
@@ -61,7 +61,7 @@
 
 				<div class="form-group col">
 					<label for="inputtext" >Densidade considerada (kg/m³)</label>
-					<input type="number" class="form-control " name="densidade" placeholder="" value="500"
+					<input type="number" class="form-control " name="densidade" placeholder=""				
 					onkeyup="     
 	 					$(this).keydown(function (event) {
 							if (event.key == 'Enter') 

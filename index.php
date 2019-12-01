@@ -63,7 +63,7 @@
 		    <form method="POST" action="login_system.php">
 				  <div class="form-group required">
 				    <label for="input-email" class="control-label">E-mail</label>
-				    <input type="text" class="form-control" id="input-email" aria-describedby="emailHelp" placeholder="Insira seu Email" name="email" required value="steve@apple.com">
+				    <input type="text" class="form-control" id="input-email" aria-describedby="emailHelp" placeholder="Insira seu Email" name="email">
 				  </div>
 				  <div class="form-group required">
 				    <label for="input-pass" class="control-label">Senha</label>

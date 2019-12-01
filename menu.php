@@ -48,7 +48,7 @@
                           <?php
                            }else{
                           ?>
-                         <p style=" color:white; font-size: 11px;" >*dispónivel somente para usuários logados</p>
+                         <p style=" color:white; font-size: 11px;" >*dispónivel somente para usuários cadastrados</p>
                           <?php
                            }?>
                           <br>

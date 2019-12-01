@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
-<body style="min-height:92vh;">
+<body>
 
   <?php
         include 'navbar.php';
@@ -34,7 +34,10 @@
           </div>      
         </div>
     </div>
-  
+    
+
+    </body>
+
     <div class="" style="
  		position: absolute;
   		bottom: 0;
@@ -51,6 +54,4 @@
 		<script src="js/jquery.min.js"></script>
 		<script src="js/popper.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-
-</body>
 </html>

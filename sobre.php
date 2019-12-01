@@ -68,10 +68,15 @@
   <br>
   <br>
   <br>
- 
+  <div class="" style="
+ 		position: relative;
+  		bottom: 0;
+  		width: 100%;
+        	    		">	
     <?php
 	    include 'footer.php';
-	  ?>
+    ?>
+  </div>
 
     <link rel="stylesheet" href="css/estilo2.css">
 		<script src="js/agrosilos.js"></script>

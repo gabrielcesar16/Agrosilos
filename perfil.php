@@ -51,21 +51,21 @@ session_start();
 			<div class="form-group required">
 
 				    <label for="input-name" class="control-label">Nome</label>
-				    <input type="text" class="form-control" id="input-name" placeholder="Insira seu nome completo" name="nome" required value="Steve Jobs">
+				    <input type="text" class="form-control" id="input-name" placeholder="Insira seu nome completo" name="nome">
 				  </div>
 
 				  <div class="form-group required">
 				    <label for="input-propriedade" class="control-label">Propriedade</label>
-				    <input type="text" class="form-control" id="input-propriedade" placeholder="Insira o nome da propiedade" name="propriedade" required value="Fazenda Azul">
+				    <input type="text" class="form-control" id="input-propriedade" placeholder="Insira o nome da propiedade" name="propriedade">
 				  </div>
 				  
 				  <div class="form-group required">
 				    <label for="input-email" class="control-label">Email</label>
-				    <input type="email" class="form-control" id="input-email" aria-describedby="emailHelp" placeholder="Insira seu Email" name="email" required value="steve@apple.com">
+				    <input type="email" class="form-control" id="input-email" aria-describedby="emailHelp" placeholder="Insira seu Email" name="email">
 				  </div>
 				  <div class="form-group required">
 				    <label for="input-pass" class="control-label">Senha</label>
-				    <input type="password" class="form-control" id="input-pass" placeholder="Insira sua senha" name="senha" required>
+				    <input type="password" class="form-control" id="input-pass" placeholder="Insira sua senha" name="senha">
 				  </div>
 				  <button type="submit" class="btn btn-green">Atualizar</button>
 				</form>

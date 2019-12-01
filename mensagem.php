@@ -52,6 +52,7 @@ VALUES
 )";
 
 mysqli_query($conn, $query);
+header('location:contato.php?ok');
 mysqli_close($conn);
 
 echo $query;
@@ -59,4 +60,4 @@ echo $query;
 ?>
 
 <hr>
-<a href="logout.php">Sair</a>
+<a href="contato.php">Sair</a>

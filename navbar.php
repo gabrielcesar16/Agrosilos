@@ -100,6 +100,6 @@ $nrow = mysqli_fetch_assoc($nresult);
     <script src="css/bootstrap.js"></script>
     <script src="css/estilo2.css"></script>
 
-<div style="margin-bottom: 20px"></div>
+<div style="margin-bottom: 30px"></div>
   </body>
 </html>

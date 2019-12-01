@@ -113,7 +113,7 @@ if ($result->num_rows > 0) {
 
 
 <div class="" style="
- 		position: absolute;
+ 		position: relative;
   		bottom: 0;
   		width: 100%;
         	    		">						
